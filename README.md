@@ -9,7 +9,7 @@ This XSS solution is offered free and unlicensed to all programmers. Updates and
 
 How it works is simple: as you run programs, it will examine the variables that you use. If the variable has never been seen before, it will attempt a simple clean of that variable, will log it into the table made for it (I use Microsoft SQL Server; you'll have to adapt it to fit your environment), and will carry on.
 
-You will want to examine that table frequently. Items auto-logged are written with an itemtype in lower case, and I reccomend that you change them to upper-case as you investigate each one.
+You will want to examine that table frequently. Items auto-logged are written with an itemtype in lower case, and I reccomend that you change them to upper-case as you investigate each one in order to keep track of which are new and still need review versus which you have validated.
 
 From that point on, your program will find that variable and read the itemtype and max length and will force your variable to conform to that; if it does not, it will shut the program down immediately; hence, your XSS protection.
 
